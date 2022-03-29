@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Tangerine:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  /*colors*/
+  --very-dark-purple: #2f0433;
+  --dark-purple: #660a6e;
+  --purple: #d21ce2;
+  --dark-blue: #100133;
+  --dark-purple-filter: #2f04339d;
+  --dark-blue-filter: #1d015eb9;
+  --dark-red-filter: #ff000060;
+  --dark-green-filter: #0e4b0e86;
+  --dark-grey-filter: #555a5586;
+  --ocean-filter: #355977b9;
+  --ocean: #14d897;
+  --gold: #ffd700;
+  --aquamarine: #7fffd4;
+  --white: #fff;
+  --fire: #ff0000af;
+  --earth: #058f05b2;
+  --air: #808080d8;
+  --water: #1919db9a;
+
+  /*fonts*/
+  --tangerine: Tangerine;
+  --ibm: IBM Plex Sans;
+}
+html {
+  scroll-behavior: smooth;
+}
+#top {
+  position: absolute;
+  right: 50px;
+  transform: scale(2);
+  color: var(--white);
+  transition: all 1s;
+}
+/* ============== header ===============*/
+header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  top: 0;
+  z-index: 100;
+  font-family: var(--ibm);
+  background-color: var(--dark-blue);
+}
+header .logo img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(125deg)
+    brightness(106%) contrast(106%);
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+}
+header nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li {
+  margin: 10px;
+}
+header nav ul li a,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  padding: 0 10px;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+}
+
+/* ============== header ===============*/
+/* ============== Main ===============*/
+section {
+  background: url(../images/galaxy.jpg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_wrapper {
+  display: flex;
+}
+.form_img {
+  background-position: -60px 0;
+  height: 458px;
+  width: 400px;
+  overflow: hidden;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+}
+.form_img img {
+  animation: rotate 30s linear infinite;
+  margin-left: -200px;
+  height: 550px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: var(--dark-blue-filter);
+  padding: 20px;
+  color: var(--white);
+  position: relative;
+  font-family: var(--ibm);
+}
+form div {
+  margin: 20px 0;
+}
+input {
+  width: 150px;
+  display: block;
+}
+select {
+  width: 150px;
+  display: block;
+}
+input[type="submit"] {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  bottom: -16px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+}
+input[type="submit"]:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+/* ============== Main ===============*/
+/* ============== Footer ===============*/
+
+footer {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  font-size: var(--ibm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+footer .socials {
+  margin-bottom: 20px;
+}
+footer .socials h2 {
+  margin: 10px;
+  text-align: center;
+}
+footer .socials ul {
+  list-style: none;
+  display: flex;
+}
+footer .socials ul li {
+  margin: 10px;
+}
+footer .socials ul li a,
+a:visited {
+  color: var(--white);
+}
+footer .socials ul li a i {
+  transform: scale(2);
+  margin: 0 10px;
+}
+footer p {
+  color: grey;
+}
+/* ============== Footer ===============*/
+/* ============== Animation ===============*/
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ============== Animation ===============*/

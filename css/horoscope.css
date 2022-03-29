@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Tangerine:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  /*colors*/
+  --very-dark-purple: #2f0433;
+  --dark-purple: #660a6e;
+  --purple: #d21ce2;
+  --dark-blue: #100133;
+  --dark-blue-filter: #1d015eb9;
+  --dark-red-filter: #ff000060;
+  --dark-green-filter: #0e4b0e86;
+  --dark-grey-filter: #555a5586;
+  --ocean-filter: #355977b9;
+  --ocean: #14d897;
+  --gold: #ffd700;
+  --aquamarine: #7fffd4;
+  --white: #fff;
+  --fire: #ff0000af;
+  --earth: #058f05b2;
+  --air: #808080d8;
+  --water: #1919db9a;
+
+  /*fonts*/
+  --tangerine: Tangerine;
+  --ibm: IBM Plex Sans;
+}
+html {
+  scroll-behavior: smooth;
+}
+#top {
+  position: absolute;
+  right: 50px;
+  transform: scale(2);
+  color: var(--white);
+  transition: all 1s;
+}
+/* ============== header ===============*/
+header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  top: 0;
+  z-index: 100;
+  font-family: var(--ibm);
+  background-color: var(--dark-blue);
+}
+header .logo img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(125deg)
+    brightness(106%) contrast(106%);
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+}
+header nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li {
+  margin: 10px;
+}
+header nav ul li a,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  padding: 0 10px;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+}
+
+/* ============== header ===============*/
+/* ============== Main ===============*/
+main {
+  background-image: url(/images/space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  height: 100vh;
+  width: 100%;
+}
+main .astro_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .astro_container h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--white);
+  font-family: var(--ibm);
+  font-size: 3rem;
+}
+.astro_row_1,
+.astro_row_2 {
+  display: flex;
+}
+main .astro_container .astro_signs {
+  color: var(--white);
+  background-color: var(--dark-blue-filter);
+  height: 250px;
+  width: 170px;
+  position: relative;
+  border: 1px solid white;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  transition: all.3s;
+}
+main .astro_container .astro_signs:hover {
+  transform: scale(1.1);
+}
+main .astro_container .astro_signs img {
+  transform: scale(1.5);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(148deg)
+    brightness(114%) contrast(115%);
+}
+main .astro_container .astro_signs .astro_name {
+  font-size: 3rem;
+  font-family: var(--tangerine);
+}
+
+main .astro_container .astro_signs i {
+  transform: scale(2);
+}
+.fire {
+  color: var(--fire);
+}
+.earth {
+  color: var(--earth);
+}
+.air {
+  color: var(--air);
+}
+.water {
+  color: var(--water);
+}
+/* === Fire Section ===*/
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--dark-blue);
+}
+section h3 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+.bg-video {
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wrapper {
+  position: absolute;
+  width: 100%;
+  display: flex;
+}
+section .signs {
+  background-color: var(--dark-red-filter);
+  color: var(--gold);
+  padding: 15px;
+  height: 470px;
+  width: 490px;
+  box-shadow: 0 0 15px 5px var(--dark-red-filter);
+  margin: 0 25px;
+  position: relative;
+}
+section .signs .info img {
+  filter: invert(78%) sepia(36%) saturate(1943%) hue-rotate(359deg)
+    brightness(108%) contrast(105%) drop-shadow(0 0 5px var(--gold));
+  transform: scale(1.5);
+}
+section .signs .info {
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+}
+
+section .signs .caracteristics {
+  margin: 5px;
+}
+
+section .signs .caracteristics p {
+  font-family: var(--ibm);
+  padding-left: 10px;
+  text-align: justify;
+  text-shadow: var(--gold);
+}
+section .signs .trait {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+section .signs table {
+  margin: 10px auto 0;
+  font-size: 0.9rem;
+}
+section .signs table td {
+  padding: 0 3px;
+  border: 1px solid var(--gold);
+  margin: 0;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-family: var(--ibm);
+}
+
+/* === Fire Section ===*/
+/* === Earth Section ===*/
+section#earth .signs .info img {
+  filter: invert(90%) sepia(22%) saturate(795%) hue-rotate(91deg)
+    brightness(100%) contrast(103%) drop-shadow(0 0 5px var(--aquamarine));
+  transform: scale(1.5);
+}
+section#earth .earth-signs .info {
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+}
+section#earth .signs {
+  background-color: var(--dark-green-filter);
+  color: var(--dark-green-filter);
+  box-shadow: 0 0 15px 5px var(--dark-green-filter);
+  color: var(--aquamarine);
+}
+
+section#earth .signs table td {
+  border: 1px solid var(--aquamarine);
+}
+/* === Earth Section ===*/
+/* === Air Section ===*/
+section#air video {
+  margin-top: -300px;
+  margin-left: -200px;
+}
+section#air .signs .info img {
+  filter: invert(100%) sepia(0%) saturate(7447%) hue-rotate(162deg)
+    brightness(118%) contrast(95%) drop-shadow(0 0 5px var(--white));
+  transform: scale(1.5);
+}
+section#air .air-signs .info {
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+}
+section#air .signs {
+  background-color: var(--dark-grey-filter);
+  color: var(--dark-grey-filter);
+  box-shadow: 0 0 15px 5px var(--dark-grey-filter);
+  color: var(--white);
+}
+
+section#air .signs table td {
+  border: 1px solid var(--white);
+}
+/* === Air Section ===*/
+/* === water Section ===*/
+
+/* === water Section ===*/
+
+/* ============== Main ===============*/
+section#water .signs .info img {
+  filter: invert(69%) sepia(99%) saturate(1804%) hue-rotate(107deg)
+    brightness(97%) contrast(84%) drop-shadow(0 0 5px var(--ocean));
+  transform: scale(1.5);
+}
+section#water .signs .info {
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+}
+section#water .signs {
+  background-color: var(--ocean-filter);
+  color: var(--ocean-filter);
+  box-shadow: 0 0 15px 5px var(--ocean-filter);
+  color: var(--ocean);
+}
+
+section#water .signs table td {
+  border: 1px solid var(--ocean);
+}
+/* ============== Footer ===============*/
+
+footer {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  font-size: var(--ibm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  bottom: -3055px;
+}
+footer .socials {
+  margin-bottom: 20px;
+}
+footer .socials h2 {
+  margin: 10px;
+  text-align: center;
+}
+footer .socials ul {
+  list-style: none;
+  display: flex;
+}
+footer .socials ul li {
+  margin: 10px;
+}
+footer .socials ul li a,
+a:visited {
+  color: var(--white);
+}
+footer .socials ul li a i {
+  transform: scale(2);
+  margin: 0 10px;
+}
+footer p {
+  color: grey;
+}
+/* ============== Footer ===============*/
