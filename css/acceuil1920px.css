@@ -91,9 +91,10 @@ header nav ul li a:hover {
 
 /* ============== Main ===============*/
 main {
-  height: 100vh;
   width: 100%;
+  height: fit-content;
   margin-top: 50px;
+  margin-top: 100vh;
 }
 /* hero */
 #hero {
@@ -102,9 +103,7 @@ main {
   background-image: url(/images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -150px 0;
-  position: absolute;
-  top: 50px;
+  background-position: -300px 0;
   display: flex;
   flex-direction: column;
   z-index: -1;
@@ -116,11 +115,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   color: #000;
-  margin-top: -170px;
+  margin-top: -190px;
   font-family: var(--tangerine);
   font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -304px;
 }
 .hero_text h1 {
   font-size: 6rem;
@@ -157,7 +159,6 @@ main {
   width: 100%;
   height: 100vh;
   background-color: var(--dark-blue);
-  margin-top: 60px;
 }
 .info .info_container {
   height: 100vh;
@@ -205,7 +206,6 @@ main {
 
 /* Horoscope */
 .horoscope {
-  height: 100vh;
   width: 100%;
   background-image: url(/images/nightsky.jpg);
   background-repeat: no-repeat;
@@ -219,6 +219,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-top: 50px;
 }
 .astro_container .astro_text {
   margin-top: 40px;
@@ -282,16 +283,16 @@ main {
 footer {
   height: 150px;
   width: 100%;
-  position: absolute;
   color: var(--white);
   background-color: var(--dark-blue);
-  bottom: -1570px;
   font-size: var(--ibm);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  position: relative;
+  margin-top: -1700px;
 }
 footer .socials {
   margin-bottom: 20px;
@@ -319,40 +320,3 @@ footer p {
   color: grey;
 }
 /* ============== Footer ===============*/
-
-/* ============== Media queries ===============*/
-@media screen and (min-width: 1900px) {
-  main {
-    height: fit-content;
-  }
-  #hero {
-    background-position: -300px 0;
-    position: static;
-    top: 0;
-  }
-  .hero_text {
-    margin-top: -190px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -304px;
-  }
-  .info {
-    margin-top: 0;
-  }
-  footer {
-    height: 150px;
-    width: 100%;
-    color: var(--white);
-    background-color: var(--dark-blue);
-    font-size: var(--ibm);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    margin-top: -1700px;
-  }
-}
-/* ============== Media queries ===============*/

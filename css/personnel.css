@@ -33,7 +33,7 @@
 html {
   scroll-behavior: smooth;
 }
-#top {
+.top {
   position: absolute;
   right: 50px;
   transform: scale(2);
@@ -93,6 +93,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+#text {
+  color: var(--white);
+  font-family: var(--ibm);
+  margin: -20px 0 100px;
+  font-size: 1.5rem;
 }
 .form_wrapper {
   display: flex;

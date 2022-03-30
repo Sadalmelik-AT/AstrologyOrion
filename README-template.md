@@ -1,0 +1,7 @@
+DW1 Projet 1:
+
+Il a été difficile d'incorporer des media queries pour adapter le site aux grands moniteurs de la salle classe, les éléments agissaient rapidement de maniere imprevisible, rendant le tout encore plus compliqué à arranger pour mon niveau actuel. Selon https://whatsmyscreensize.com/, le site a été inialement crée pour une width de 1536px qui correspond à celle de mon ordianteur portable ( Acer nitro 5). Donc j'ai simplement incorporé des fichiers css extra (3) pour les pages nécissitant un ajustement pour les grands moniteurs soit acceuil.html, horoscope.html et partenaire.html. Le query commence 20px avant la résolution choisie pour m'assurer que cela fonctionne. Selon le meme site, la width des grands moniteurs est de 1920px.
+
+En ce qui concerne le caroussel de la page partenaire.html, c'est un copié collé adapté pour le context du site. Toutefois je suis capable de créer un caroussel presque parfait, le probleme survenait quand j'utilisais la nav du caroussel: la page au complete defilait avant de faire defiler les éléments du caroussel ce qui rendait l'experience sur le site moins agréable.
+
+Apres avoir étudié le code copié collé, je pense avoir trouvé la solution: si je retire du code, avec display: none , la nav du caroussel puis, dans un second lieu, j'ajoute une pseudo-classe :target pour ces memes éléments suivi du caroussel-item à afficher, la navigation se fera uniquement dans le caroussel en les rendant visible et/ou invisible.

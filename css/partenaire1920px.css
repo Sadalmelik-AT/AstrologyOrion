@@ -151,12 +151,17 @@ section .info a:hover {
   background-color: var(--white);
   color: var(--dark-blue);
 }
+section#caroussel {
+  display: flex;
+  align-items: center;
+}
 /*=========== carousel =============*/
 .wrapper {
   position: absolute;
   width: 500px;
   right: 100px;
-  top: 100px;
+  top: 50%;
+  margin-top: -300px;
 }
 .carousel-wrapper {
   position: relative;
@@ -229,6 +234,7 @@ section .info a:hover {
   z-index: 2;
   opacity: 1;
 }
+
 .carousel-wrapper *:target ~ .item-1 {
   opacity: 0;
 }
@@ -290,10 +296,3 @@ footer p {
   }
 }
 /* ============== Animation ===============*/
-/* ============== Media queries ===============*/
-@media screen and (min-width: 1900px) {
-  .wrapper {
-    margin-top: -300px;
-  }
-}
-/* ============== Media queries ===============*/
